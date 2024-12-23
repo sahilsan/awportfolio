@@ -1,0 +1,209 @@
+@import url(https://fonts.bunny.net/css?family=figtree:400,400i,900,900i);
+
+/* $TOC :: Table of Contents (this current section) */
+/* $PAL :: Color Palette */
+/* $CONT :: The Container System */
+/* $SECT :: Header/Footer Areas */
+/* $TYPE :: Typographic Styles */
+/* $UTIL :: Tools and Pouporri */
+/* $PRPG :: Page-specific Styles */
+
+/* $PAL */
+:root {
+    --accent: #91a2bc;
+    --primary: #94aba3;
+    --secondary: #cb904a;
+    --aux: #c0dcf3;
+    --contrastDark: #252525;
+    --contrastLight: #eeeeee;
+}
+
+/* /PAL */
+
+/* $CONT */
+/* The outer wrapper for the grid system */
+.container {
+    margin-block: 0;
+    margin-inline: auto;
+    /* Centers the container on the x-axis */
+    max-width: 60rem;
+    /* Default calculation is 960px */
+    inline-size: 90%;
+    /* If the browser width is less than 1120px, then it will only fill 90% of the width */
+}
+
+.thin-container {
+    margin-block: 0;
+    margin-inline: auto;
+    /* Centers the container on the x-axis */
+    max-width: 40rem;
+    /* Default calculation is 960px */
+    inline-size: 90%;
+    /* If the browser width is less than 1120px, then it will only fill 90% of the width */
+}
+
+/* /CONT */
+
+/* $SECT */
+.hero {
+    background-image: url('../img/IMG_4622.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    block-size: 100vh;
+    /* Makes the intro block the full height of the browser window */
+    position: relative;
+    /* Needed to make .abso-center work */
+    color: var(--contrastLight);
+    /* Text color for hero item */
+}
+/* Large starter section of the homepage */
+
+.footer {
+    background-color: var(--aux);
+    margin-block-start: 4rem;
+    padding-block: 1rem;
+}
+
+html {
+    font-size: 112.5%;
+    /*18px*/
+}
+
+body {
+    background: var(--contrastLight);
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--contrastDark);
+}
+
+/* /SECT */
+
+/* $TYPE */
+p {
+    margin-block: 1rem;
+    margin-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-block-start: 3rem;
+    margin-inline: 0;
+    margin-block-end: 1.38rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-block-start: 0;
+    font-size: 2.488rem;
+}
+
+h2 {
+    font-size: 2.074rem;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+small,
+.text_small {
+    font-size: 0.833rem;
+}
+
+.center {
+    text-align: center;
+}
+/* Centers your text */
+
+/* /TEXT */
+
+/* $UTIL */
+a,
+a:visited {
+    color: var(--accent);
+    text-transform: uppercase;
+    transition: 1s color ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: var(--secondary);
+}
+
+.abso-center {
+    position: absolute;
+
+    /* Sets x/y margin coordinates to center block */
+    margin-inline: auto;
+    margin-block: auto;
+
+    /* Block size */
+    inline-size: 80%; /* Automatically resizes the width to 80% of the .container */
+    block-size: 60%; /* Automatically resizes the height of the block to fit the content */
+
+    inset-block: 0; /* Equal to top:0;bottom:0; */
+    inset-inline: 0; /* Equal to left:0;right:0; */
+
+    padding-inline: 2rem;
+    padding-block: 2rem;
+
+    text-align: center;
+}
+
+.abso-center img {
+    display: block; /* Makes img work with positioning CSS */
+    margin-inline: auto; /* Center on X axis */
+    padding-block-end: 2rem; /* Adds padding between image and text only */
+}
+/* .abso-center lets you position a block of something in the center of a relative position container */
+
+.imgcenter {
+    margin-inline: auto; /* Center on X axis */
+}
+/* Centers your images inside any <div> */
+
+/* /UTIL */
+
+/* $HPRO */
+#pro1,
+#pro2,
+#pro3,
+#pro4 {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* General settings for all hero banners on project pages */
+
+#pro1 {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 1) 0%, rgba(37, 37, 37, 0) 100%), url("../img/Plan_Oblique.jpg");
+    background-position: center;
+}
+
+#pro2 {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 1) 0%, rgba(37, 37, 37, 0) 100%), url("../img/site_plan_1.jpg"); 
+    background-position: center;
+}
+
+#pro3 {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 1) 0%, rgba(37, 37, 37, 0) 100%), url("../img/interior.jpg");
+    background-position: center;
+}
+#pro4 {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 1) 0%, rgba(37, 37, 37, 0) 100%), url("../img/skylight.jpg");
+    background-position: center;
